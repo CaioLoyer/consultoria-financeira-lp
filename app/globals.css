@@ -1,26 +1,187 @@
 @import "tailwindcss";
 
+/* ========================================
+   MTBI DESIGN SYSTEM
+   Color Palette based on reference images
+   ======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background Colors */
+  --background: 222 47% 6%;
+  --background-secondary: 222 47% 11%;
+  --background-tertiary: 222 47% 16%;
+  
+  /* Foreground Colors */
+  --foreground: 0 0% 98%;
+  --foreground-muted: 217 19% 62%;
+  
+  /* Primary - Cyan */
+  --primary: 187 85% 43%;
+  --primary-foreground: 222 47% 6%;
+  
+  /* Secondary - Magenta/Pink */
+  --secondary: 292 84% 61%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Accent - Gold */
+  --accent: 43 74% 49%;
+  --accent-foreground: 222 47% 6%;
+  
+  /* Card */
+  --card: 222 47% 9%;
+  --card-foreground: 0 0% 98%;
+  
+  /* Muted */
+  --muted: 222 47% 16%;
+  --muted-foreground: 217 19% 62%;
+  
+  /* Border */
+  --border: 222 47% 20%;
+  
+  /* Ring */
+  --ring: 187 85% 43%;
+  
+  /* Radius */
+  --radius: 0.75rem;
+  
+  /* Success/Error */
+  --success: 142 71% 45%;
+  --error: 0 84% 60%;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: hsl(var(--background));
+  --color-background-secondary: hsl(var(--background-secondary));
+  --color-background-tertiary: hsl(var(--background-tertiary));
+  --color-foreground: hsl(var(--foreground));
+  --color-foreground-muted: hsl(var(--foreground-muted));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-ring: hsl(var(--ring));
+  --color-success: hsl(var(--success));
+  --color-error: hsl(var(--error));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Gradient Utilities */
+.gradient-text {
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gradient-bar {
+  height: 3px;
+  background: linear-gradient(90deg, hsl(var(--secondary)), hsl(var(--primary)));
+  border-radius: 2px;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Glow Effects */
+.glow-primary {
+  box-shadow: 0 0 20px hsla(var(--primary), 0.3);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px hsla(var(--secondary), 0.3);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: #25D366;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #20BD5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Card Hover */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Section spacing */
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* Tracking for headings */
+.tracking-spaced {
+  letter-spacing: 0.3em;
 }
