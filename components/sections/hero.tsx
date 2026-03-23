@@ -8,27 +8,7 @@ export function Hero() {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background-secondary/50 via-background to-background" />
       
-      {/* Animated Marquee Banners */}
-      <div className="relative mt-8 space-y-2 overflow-hidden py-4">
-        <div className="flex animate-marquee whitespace-nowrap bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 py-3">
-          {[...Array(10)].map((_, i) => (
-            <span key={i} className="mx-8 flex items-center gap-3 text-sm font-bold tracking-wide text-foreground">
-              <span className="text-accent">✦</span>
-              MÉTODO ANTI-BURRO DE INVESTIMENTO
-            </span>
-          ))}
-        </div>
-        <div className="flex animate-marquee whitespace-nowrap bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/20 py-3" style={{ animationDirection: "reverse" }}>
-          {[...Array(10)].map((_, i) => (
-            <span key={i} className="mx-8 flex items-center gap-3 text-sm font-bold tracking-wide text-foreground">
-              <span className="text-primary">✦</span>
-              MTBI
-              <span className="text-secondary">✦</span>
-              INVESTIMENTOS COM CLAREZA
-            </span>
-          ))}
-        </div>
-      </div>
+
 
       {/* Main Content */}
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
