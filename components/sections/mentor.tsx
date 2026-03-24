@@ -11,20 +11,21 @@ export function Mentor() {
           {/* Left Content */}
           <div className="order-2 lg:order-1">
             <p className="mb-4 font-heading text-sm font-medium tracking-spaced text-primary">
-              O Q U E É O
+              Q U E M É O
             </p>
             <h2 className="mb-6 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
-              Investidor Casca Grossa
+              Mentor do <span className="gradient-text">MTBI</span>
             </h2>
             <p className="mb-6 text-lg leading-relaxed text-foreground-muted">
-              Felipe Guimarães é investidor a mais de 15 anos, Analista CNPI, Consultor CVM e Fundador
-              da Notorius Wealth e já formou mais de 6.000 alunos com o seu método de investimentos.
+              Caio Loyer é investidor há mais de 10 anos, especialista em mercado financeiro e
+              educador dedicado a transformar a forma como as pessoas investem. Já ajudou centenas
+              de alunos a desenvolverem autonomia nas suas decisões financeiras.
             </p>
             <blockquote className="relative border-l-2 border-primary pl-6">
               <p className="text-base italic leading-relaxed text-foreground-muted">
-                &ldquo;Reuni no Investidor casca grossa todo conhecimento adquirido ao longo dos últimos
-                anos de forma simples e didática para que qualquer pessoa possa gastando menos de 15
-                minutos por mês investir acima da média&rdquo;.
+                &ldquo;O MTBI nasceu da minha experiência prática no mercado. Criei um método
+                simples e direto para que qualquer pessoa consiga investir com segurança,
+                sem depender de dicas ou promessas milagrosas&rdquo;.
               </p>
             </blockquote>
           </div>
@@ -38,10 +39,10 @@ export function Mentor() {
               {/* Image container */}
               <div className="relative overflow-hidden rounded-2xl border border-border/50">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ref02-Ktj4A7CogHJ9iXQVSogA1WOiUUAq8g.jpeg"
-                  alt="Felipe Guimarães - Fundador do Investidor Casca Grossa"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-gyitjfwwaYGmDGeRLed3UkwxBzxaiC.jpg"
+                  alt="Caio Loyer ministrando aula sobre tipos de ativos"
                   width={800}
-                  height={900}
+                  height={1000}
                   className="h-auto w-full object-cover"
                   priority
                 />
