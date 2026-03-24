@@ -1,0 +1,10 @@
+export { Header } from "./header";
+export { Hero } from "./hero";
+export { Mentor } from "./mentor";
+export { About } from "./about";
+export { Modules } from "./modules";
+export { Benefits } from "./benefits";
+export { FAQ } from "./faq";
+export { CTA } from "./cta";
+export { Footer } from "./footer";
+export { WhatsAppButton } from "./whatsapp-button";
