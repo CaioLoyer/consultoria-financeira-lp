@@ -4,6 +4,8 @@ import { Mentor } from "@/components/sections/mentor";
 import { About } from "@/components/sections/about";
 import { Modules } from "@/components/sections/modules";
 import { Benefits } from "@/components/sections/benefits";
+import { Guarantee } from "@/components/sections/guarantee";
+import { Pricing } from "@/components/sections/pricing";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 import { Footer } from "@/components/sections/footer";
@@ -19,6 +21,8 @@ export default function Home() {
         <About />
         <Modules />
         <Benefits />
+        <Pricing />
+        <Guarantee />
         <FAQ />
         <CTA />
       </main>
