@@ -5,7 +5,7 @@ export function Mentor() {
     <section id="mentor" className="relative overflow-hidden bg-background-secondary py-20 lg:py-32">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background-secondary to-background" />
-      
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Content */}
@@ -35,11 +35,11 @@ export function Mentor() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Decorative glow */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 blur-2xl" />
-              
+
               {/* Image container */}
               <div className="relative overflow-hidden rounded-2xl border border-border/50">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-gyitjfwwaYGmDGeRLed3UkwxBzxaiC.jpg"
+                  src="/mentor.jpg"
                   alt="Caio Loyer ministrando aula sobre tipos de ativos"
                   width={800}
                   height={1000}
